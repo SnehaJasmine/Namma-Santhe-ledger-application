@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --santhe-bg: #F8F9FA;
+  --santhe-ink: #101828;
+  --santhe-line: #EAECF0;
+  --santhe-accent: #008D6A; /* Fresh vendor green */
+  --santhe-danger: #D92D20;
+}
+
+body {
+  background-color: var(--santhe-bg);
+  color: var(--santhe-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono-number {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+@utility glass-card {
+  background: white;
+  border: 1px solid var(--santhe-line);
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+@utility keypad-btn {
+  @apply flex items-center justify-center p-4 text-2xl font-semibold glass-card active:scale-95 transition-all;
+}
+
+@utility technical-grid {
+  background-image: linear-gradient(var(--santhe-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--santhe-line) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
